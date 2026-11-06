@@ -134,7 +134,7 @@ Backend จะคำนวณ `subTotal` และ `totalAmount` ก่อนบ
 |---|---|
 | Driver Class | `org.h2.Driver` |
 | JDBC URL | `jdbc:h2:file:/data/orders` |
-| User Name | `kee` |
+| User Name | `user` |
 | Password | เว้นว่าง |
 
 คำสั่งดูข้อมูล:
@@ -145,6 +145,8 @@ SELECT * FROM ORDER_ITEMS;
 ```
 
 H2 Console สามารถแก้ไขและลบข้อมูลได้ จึงควรใช้สำหรับการพัฒนาและใช้งานอย่างระมัดระวัง พอร์ตของระบบถูกผูกกับ `127.0.0.1` เพื่อให้เข้าถึงจากเครื่องนี้เท่านั้น
+
+หากมี Docker volume เดิมที่สร้างด้วยชื่อผู้ใช้อื่น ต้องย้ายผู้ใช้ในฐานข้อมูลหรือสร้าง volume ใหม่ก่อนใช้ค่า `user` การสร้าง volume ใหม่ด้วย `docker compose down -v` จะลบข้อมูลเดิมทั้งหมด
 
 ## คำสั่งที่ใช้บ่อย
 

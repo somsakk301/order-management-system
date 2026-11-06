@@ -35,4 +35,6 @@ docker compose down        # หยุดระบบและเก็บข้
 - REST API: <http://localhost:8082/orders>
 - H2 Console: <http://localhost:8082/h2-console>
 
-H2 Console เชื่อมต่อด้วย JDBC URL `jdbc:h2:file:/data/orders`, username `kee` และไม่ต้องใส่รหัสผ่าน
+H2 Console เชื่อมต่อด้วย JDBC URL `jdbc:h2:file:/data/orders`, username `user` และไม่ต้องใส่รหัสผ่าน
+
+หาก Docker volume เดิมสร้างด้วยชื่อผู้ใช้อื่น ต้องย้ายผู้ใช้ในฐานข้อมูลหรือสร้าง volume ใหม่ก่อนใช้ค่า `user` การใช้ `docker compose down -v` จะลบข้อมูลเดิมทั้งหมด

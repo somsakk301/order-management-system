@@ -5,6 +5,7 @@ services:
       - "127.0.0.1:8082:8081"
     environment:
       SPRING_DATASOURCE_URL: "jdbc:h2:file:/data/orders"
+      SPRING_DATASOURCE_USERNAME: "user"
       SPRING_H2_CONSOLE_ENABLED: "true"
       SPRING_H2_CONSOLE_SETTINGS_WEB_ALLOW_OTHERS: "true"
     volumes:
